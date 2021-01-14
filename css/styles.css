@@ -1,0 +1,133 @@
+:root {
+    --primary: white; /*white*/
+    --background: #39375B; /*space-cadet - dark purple*/
+    --secondary: #F5B0CB;
+    --pale-silver: #C4BBB8;
+    --orchid:#DC6ACF;
+    --dark-blue-gray: #745C97;
+}
+
+/*General*/
+
+body {
+    font-family: 'PT Serif', serif;
+    background-color: var(--background);
+    color: var(--primary);
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+h1, h2, h3, p, ul, a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    margin-top: 64px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*Navbar*/
+
+.navbar {
+    background-color: var(--orchid);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar li {
+    margin-left: 16px;
+    padding: 16px 0;
+}
+
+/*Header*/
+#header {
+    padding: 120px 0;
+}
+
+.heading-shadow {
+    text-shadow: var(--orchid) 2px 2px 0px;
+}
+
+/*Projects*/
+section:first-child {
+    margin-top: 0;
+}
+.heading-underline {
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.heading-underline::after {
+    content: ' ';
+    position: absolute;
+    width: 60px;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 3px;
+    background-color: var(--secondary);
+}
+
+.grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template: 160px / repeat(3, 160px);
+    grid-gap: 16px;
+    grid-auto-columns: 160px;
+    grid-auto-rows: 160px;
+}
+
+.box {
+    background-color: var(--secondary);
+}
+
+@media (max-width: 628px) {
+    .grid {
+        grid-template: 160px  160px / 160px 160px;
+    }
+}
+
+@media (max-width: 434px) {
+    .grid {
+        grid-template: 160px 160px 160px / 160px;
+    }
+}
+
+.box.a {
+    background-image: url(../img/watch.jpg);
+    background-size: cover;
+}
+
+/*Salad*/
+.html {
+    background-image: url(../salad/HTML5_Badge_128.png);
+    background-repeat: no-repeat;
+    transform: scale(.5);
+}
+
+.text {
+    margin-top: 32px;
+}
