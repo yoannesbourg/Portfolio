@@ -9,6 +9,10 @@
 
 /*General*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'PT Serif', serif;
     background-color: var(--background);
@@ -31,6 +35,11 @@ h1, h2, h3, p, ul, a {
 a {
     color: var(--primary);
     text-decoration: none;
+    transition: .3s ease-in-out;
+}
+
+a:hover {
+    color: var(--orchid);
 }
 
 li {
@@ -47,9 +56,9 @@ section {
 }
 
 /*Navbar*/
-
 .navbar {
-    background-color: var(--orchid);
+    position: fixed;
+    right: 0;
 }
 
 .navbar ul {
@@ -61,6 +70,8 @@ section {
     margin-left: 16px;
     padding: 16px 0;
 }
+
+
 
 /*Header*/
 #header {
@@ -130,4 +141,23 @@ section:first-child {
 
 .text {
     margin-top: 32px;
+}
+
+/*Footer*/
+#footer {
+    margin-top: 32px;
+    background-color: var(--orchid);
+}
+
+#footer .container {
+    display: flex;
+    justify-content: center;
+}
+.footer-link {
+    padding: 8px 0;
+    transition: .3s ease-in-out;
+}
+
+.footer-link:hover {
+    opacity: .5;
 }
